@@ -51,7 +51,7 @@ python3 -m http.server
 
 ## 🌐 Live Demo
 
-[https://shayannaqvi45.github.io/instagram-ui](https://shayannaqvi45.github.io/instagram-ui)
+(https://shayannaqvi45.github.io/FentixTech---Web-Dev-Internship-Task-4/)
 
 ---
 
