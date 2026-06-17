@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram UI – 3 Screens</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<p class="page-title">Instagram UI · 3 Screens</p>
+
+<div class="phones">
+
+  <!-- ================================================
+       PHONE 1 — PROFILE
+  ================================================ -->
+  <div class="phone" style="position:relative">
+    <span class="phone__label">Screen 1 · Profile</span>
+    <div class="phone__notch"></div>
+
+    <!-- Status bar -->
+    <div class="status">
+      <span>9:41</span>
+      <div class="status__icons">
+        <svg width="16" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="7" width="3" height="5" rx="0.5"/><rect x="4.5" y="4" width="3" height="8" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg>
+        <svg width="14" height="11" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 4.5a10 10 0 0 1 14 0M3.5 7a6.5 6.5 0 0 1 9 0M6 9.5a3 3 0 0 1 4 0"/></svg>
+        <svg width="22" height="11" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5"/><rect x="2" y="2" width="14" height="8" rx="1.2" fill="currentColor" stroke="none"/><rect x="21.5" y="4" width="2" height="4" rx="1"/></svg>
+      </div>
+    </div>
+
+    <!-- Top bar -->
+    <div class="topbar">
+      <div class="topbar__title">
+        maria.designs
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="topbar__icons">
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span>
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
+      </div>
+    </div>
+
+    <div class="screen">
+
+      <!-- Profile info -->
+      <div class="profile-section">
+        <div class="profile-top">
+          <div>
+            <div class="profile-av-ring">
+              <div class="profile-av-inner">
+                <div class="av av-xl">MS</div>
+              </div>
+            </div>
+          </div>
+          <div class="stats">
+            <div><div class="stat-num">248</div><div class="stat-lbl">Posts</div></div>
+            <div><div class="stat-num">12.4K</div><div class="stat-lbl">Followers</div></div>
+            <div><div class="stat-num">186</div><div class="stat-lbl">Following</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-bio">
+        <div class="profile-name">Maria Santos</div>
+        <div class="profile-cat">Digital Product Designer</div>
+        <div class="profile-txt">UI/UX design &amp; visual systems ✦
+📍 Lahore, Pakistan
+👇 New portfolio is live</div>
+        <a class="profile-link" href="#">mariasantos.design</a>
+      </div>
+
+      <div class="profile-actions">
+        <button class="btn btn-grad">Edit profile</button>
+        <button class="btn btn-outline">Share</button>
+        <button class="btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.4"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M18 8.5v5M15.5 11h5"/></svg>
+        </button>
+      </div>
+
+      <!-- Story highlights -->
+      <div class="highlights">
+        <div class="hl">
+          <div class="hl-ring" style="background:var(--grad)"><div class="hl-ring-inner">✈️</div></div>
+          <span class="hl-lbl">Travel</span>
+        </div>
+        <div class="hl">
+          <div class="hl-ring" style="background:var(--grad)"><div class="hl-ring-inner">💼</div></div>
+          <span class="hl-lbl">Work</span>
+        </div>
+        <div class="hl">
+          <div class="hl-ring" style="background:var(--grad)"><div class="hl-ring-inner">☕</div></div>
+          <span class="hl-lbl">Coffee</span>
+        </div>
+        <div class="hl">
+          <div class="hl-ring" style="background:var(--grad)"><div class="hl-ring-inner">👯</div></div>
+          <span class="hl-lbl">Friends</span>
+        </div>
+        <div class="hl">
+          <div class="hl-ring hl-new"><div class="hl-ring-inner" style="color:var(--soft)">+</div></div>
+          <span class="hl-lbl">New</span>
+        </div>
+      </div>
+
+      <!-- Content tabs -->
+      <div class="profile-tabs">
+        <div class="profile-tab active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="5.5" height="5.5" rx="1"/><rect x="9.25" y="3" width="5.5" height="5.5" rx="1"/><rect x="15.5" y="3" width="5.5" height="5.5" rx="1"/><rect x="3" y="9.25" width="5.5" height="5.5" rx="1"/><rect x="9.25" y="9.25" width="5.5" height="5.5" rx="1"/><rect x="15.5" y="9.25" width="5.5" height="5.5" rx="1"/><rect x="3" y="15.5" width="5.5" height="5.5" rx="1"/><rect x="9.25" y="15.5" width="5.5" height="5.5" rx="1"/><rect x="15.5" y="15.5" width="5.5" height="5.5" rx="1"/></svg>
+        </div>
+        <div class="profile-tab">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="profile-tab">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="10" r="2.3"/><path d="M7.5 17c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg>
+        </div>
+      </div>
+
+      <!-- Post grid -->
+      <div class="post-grid">
+        <div class="pg-item"><span class="pg-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="13" height="13" rx="2.4"/><rect x="9" y="2" width="13" height="13" rx="2.4" fill="none" stroke="white" stroke-width="1.6"/></svg></span></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"><span class="pg-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M5 3l16 9-16 9z"/></svg></span></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"><span class="pg-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="13" height="13" rx="2.4"/><rect x="9" y="2" width="13" height="13" rx="2.4" fill="none" stroke="white" stroke-width="1.6"/></svg></span></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"><span class="pg-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M5 3l16 9-16 9z"/></svg></span></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"></div>
+        <div class="pg-item"></div>
+      </div>
+    </div>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9.5h12V10"/></svg></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg></div>
+      <div class="bn-item active">
+        <div class="av av-xs" style="border:2px solid var(--pink)">MS</div>
+        <div class="bn-dot"></div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ================================================
+       PHONE 2 — FEED
+  ================================================ -->
+  <div class="phone" style="position:relative">
+    <span class="phone__label">Screen 2 · Feed</span>
+    <div class="phone__notch"></div>
+
+    <div class="status">
+      <span>9:41</span>
+      <div class="status__icons">
+        <svg width="16" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="7" width="3" height="5" rx="0.5"/><rect x="4.5" y="4" width="3" height="8" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg>
+        <svg width="14" height="11" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 4.5a10 10 0 0 1 14 0M3.5 7a6.5 6.5 0 0 1 9 0M6 9.5a3 3 0 0 1 4 0"/></svg>
+        <svg width="22" height="11" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5"/><rect x="2" y="2" width="14" height="8" rx="1.2" fill="currentColor" stroke="none"/><rect x="21.5" y="4" width="2" height="4" rx="1"/></svg>
+      </div>
+    </div>
+
+    <div class="topbar">
+      <div class="topbar__ig">Instagram</div>
+      <div class="topbar__icons">
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+      </div>
+    </div>
+
+    <div class="screen">
+      <!-- Stories -->
+      <div class="stories-row">
+        <div class="story-item">
+          <div class="story-own-wrap">
+            <div class="story-ring story-own">
+              <div class="story-ring-inner" style="background:var(--bg)">
+                <div class="av av-sm">MS</div>
+              </div>
+            </div>
+            <div class="story-plus">+</div>
+          </div>
+          <span class="story-name">Your story</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring"><div class="story-ring-inner s1">JC</div></div>
+          <span class="story-name">jamal</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring"><div class="story-ring-inner s2">SK</div></div>
+          <span class="story-name">sara.k</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring"><div class="story-ring-inner s3">PR</div></div>
+          <span class="story-name">priya</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring"><div class="story-ring-inner s4">NW</div></div>
+          <span class="story-name">nadia</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring"><div class="story-ring-inner s5">HT</div></div>
+          <span class="story-name">hamza</span>
+        </div>
+      </div>
+
+      <!-- Feed post 1 -->
+      <div class="feed-post">
+        <div class="feed-post-header">
+          <div class="story-ring" style="width:42px;height:42px;padding:2px">
+            <div class="story-ring-inner s2" style="font-size:1.3rem">SK</div>
+          </div>
+          <div class="feed-post-user">
+            <span class="feed-post-name">sara.k</span>
+            <span class="feed-post-loc">Lahore, Pakistan</span>
+          </div>
+          <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+        </div>
+        <div class="feed-post-img" style="background:linear-gradient(160deg,#f953c6,#b91d73,#6a3de8)">
+          <span style="font-size:5rem">🌸</span>
+        </div>
+        <div class="feed-post-actions">
+          <span class="ico like-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          <span class="ico ico-right"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+        </div>
+        <div class="feed-post-likes" data-count="2841">2,841 likes</div>
+        <div class="feed-post-caption"><span>sara.k</span> Golden hour never misses ✨ feeling grateful today 🌸</div>
+        <div class="feed-post-time">2 hours ago</div>
+      </div>
+
+      <!-- Feed post 2 -->
+      <div class="feed-post">
+        <div class="feed-post-header">
+          <div class="story-ring" style="width:42px;height:42px;padding:2px">
+            <div class="story-ring-inner s5" style="font-size:1.3rem">PR</div>
+          </div>
+          <div class="feed-post-user">
+            <span class="feed-post-name">priya.designs</span>
+            <span class="feed-post-loc">Mumbai, India</span>
+          </div>
+          <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+        </div>
+        <div class="feed-post-img" style="background:linear-gradient(160deg,#a18cd1,#fbc2eb,#f8a5c2)">
+          <span style="font-size:5rem">🎨</span>
+        </div>
+        <div class="feed-post-actions">
+          <span class="ico like-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          <span class="ico ico-right"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+        </div>
+        <div class="feed-post-likes" data-count="1204">1,204 likes</div>
+        <div class="feed-post-caption"><span>priya.designs</span> New UI concept dropping soon 👀 purple vibes only 💜</div>
+        <div class="feed-post-time">5 hours ago</div>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="bn-item active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9.5h12V10"/></svg><div class="bn-dot"></div></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg></div>
+      <div class="bn-item"><div class="av av-xs">MS</div></div>
+    </nav>
+  </div>
+
+  <!-- ================================================
+       PHONE 3 — EXPLORE
+  ================================================ -->
+  <div class="phone" style="position:relative">
+    <span class="phone__label">Screen 3 · Explore</span>
+    <div class="phone__notch"></div>
+
+    <div class="status">
+      <span>9:41</span>
+      <div class="status__icons">
+        <svg width="16" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="7" width="3" height="5" rx="0.5"/><rect x="4.5" y="4" width="3" height="8" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg>
+        <svg width="14" height="11" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 4.5a10 10 0 0 1 14 0M3.5 7a6.5 6.5 0 0 1 9 0M6 9.5a3 3 0 0 1 4 0"/></svg>
+        <svg width="22" height="11" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.5" y="0.5" width="20" height="11" rx="2.5"/><rect x="2" y="2" width="14" height="8" rx="1.2" fill="currentColor" stroke="none"/><rect x="21.5" y="4" width="2" height="4" rx="1"/></svg>
+      </div>
+    </div>
+
+    <div class="topbar">
+      <div class="topbar__title">Explore</div>
+      <div class="topbar__icons">
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h16"/></svg></span>
+      </div>
+    </div>
+
+    <div class="screen">
+      <div class="search-bar-wrap">
+        <div class="search-bar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span>Search</span>
+        </div>
+      </div>
+
+      <!-- Explore grid -->
+      <div class="explore-grid">
+        <div class="eg-item tall"><span style="font-size:3rem">🌸</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">💜</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">✨</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🎨</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🦋</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🌙</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🎀</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🌺</span></div>
+        <div class="eg-item tall"><span style="font-size:3rem">💫</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🌷</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🎭</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🌈</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">💅</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🎪</span></div>
+        <div class="eg-item"><span style="font-size:2.2rem">🌟</span></div>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9.5h12V10"/></svg></div>
+      <div class="bn-item active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><div class="bn-dot"></div></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></div>
+      <div class="bn-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg></div>
+      <div class="bn-item"><div class="av av-xs">MS</div></div>
+    </nav>
+  </div>
+
+</div><!-- /phones -->
+
+<script src="main.js"></script>
+</body>
+</html>

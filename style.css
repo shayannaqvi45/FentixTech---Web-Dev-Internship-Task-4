@@ -1,0 +1,354 @@
+/* =========================================================
+   STYLE.CSS — Instagram UI (3 Screens)
+   Pink / Purple theme
+   ========================================================= */
+
+:root {
+  --pink:    #e91e8c;
+  --pink-lt: #f06292;
+  --purple:  #9c27b0;
+  --grad:    linear-gradient(135deg, #f06292, #e91e8c, #9c27b0);
+  --grad2:   linear-gradient(160deg, #fce4ec, #f8bbd0, #e1bee7);
+  --bg:      #f5f0fa;
+  --white:   #ffffff;
+  --text:    #212121;
+  --soft:    #757575;
+  --border:  #e0d0ea;
+
+  /* Story avatar gradients */
+  --story1:  linear-gradient(135deg, #ff9a9e, #fecfef);
+  --story2:  linear-gradient(135deg, #a18cd1, #fbc2eb);
+  --story3:  linear-gradient(135deg, #ffecd2, #fcb69f);
+  --story4:  linear-gradient(135deg, #84fab0, #8fd3f4);
+  --story5:  linear-gradient(135deg, #f093fb, #f5576c);
+
+  /* Post / grid tile gradients */
+  --post1:   linear-gradient(160deg, #f8a5c2, #c06c84);
+  --post2:   linear-gradient(160deg, #c779d0, #feac5e);
+  --post3:   linear-gradient(160deg, #e96c8c, #b06ab4);
+  --post4:   linear-gradient(160deg, #f953c6, #b91d73);
+  --post5:   linear-gradient(160deg, #e0c3fc, #8ec5fc);
+  --post6:   linear-gradient(160deg, #fbc2eb, #a6c1ee);
+  --post7:   linear-gradient(160deg, #fd79a8, #6c5ce7);
+  --post8:   linear-gradient(160deg, #fddb92, #d1fdff);
+  --post9:   linear-gradient(160deg, #e17055, #d63031);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 62.5%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.4rem;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem 6rem;
+  gap: 4rem;
+}
+ul, ol { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+svg { display: block; }
+
+/* ---- Page title ---- */
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -.02em;
+}
+
+/* ---- Phones row ---- */
+.phones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ---- Phone frame ---- */
+.phone {
+  width: 320px;
+  height: 640px;
+  background: var(--white);
+  border-radius: 40px;
+  border: 8px solid #1a1a1a;
+  box-shadow: 0 24px 60px -12px rgba(180,0,120,.25), 0 8px 20px rgba(0,0,0,.15);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.phone__notch {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 36%; height: 22px; background: #1a1a1a;
+  border-radius: 0 0 14px 14px; z-index: 10;
+}
+.phone__label {
+  position: absolute; top: -2.8rem; left: 0;
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--pink);
+}
+
+/* ---- Status bar ---- */
+.status {
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px 4px;
+  font-size: 1.1rem; font-weight: 700;
+  background: var(--white);
+}
+.status__icons { display: flex; align-items: center; gap: 5px; }
+
+/* ---- Scrollable screen ---- */
+.screen { flex: 1; overflow-y: auto; scrollbar-width: none; }
+.screen::-webkit-scrollbar { display: none; }
+
+/* ---- Top bar ---- */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .6rem 1.6rem .8rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+.topbar__title { font-size: 1.6rem; font-weight: 800; display: flex; align-items: center; gap: .4rem; }
+.topbar__icons { display: flex; gap: 1.4rem; align-items: center; }
+.topbar__ig {
+  font-size: 2rem; font-weight: 900;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---- Icon button ---- */
+.ico {
+  display: inline-flex; width: 2.4rem; height: 2.4rem;
+  align-items: center; justify-content: center; color: var(--text);
+}
+
+/* ---- Avatars ---- */
+.av {
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-weight: 800; color: #fff; flex-shrink: 0;
+  background: var(--grad);
+}
+.av-xl { width: 72px; height: 72px; font-size: 2.2rem; }
+.av-md  { width: 52px; height: 52px; font-size: 1.6rem; }
+.av-sm  { width: 38px; height: 38px; font-size: 1.2rem; }
+.av-xs  { width: 26px; height: 26px; font-size: .9rem;  }
+
+/* ---- Bottom nav ---- */
+.bottom-nav {
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: space-around;
+  padding: 1rem .8rem .6rem;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+.bn-item { display: flex; flex-direction: column; align-items: center; gap: .2rem; color: var(--soft); }
+.bn-item.active { color: var(--pink); }
+.bn-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--pink); margin-top: 1px; }
+
+/* ---- Story gradient helpers ---- */
+.s1 { background: var(--story1); }
+.s2 { background: var(--story2); }
+.s3 { background: var(--story3); }
+.s4 { background: var(--story4); }
+.s5 { background: var(--story5); }
+
+/* ======================================================
+   SCREEN 1 — PROFILE
+   ====================================================== */
+
+.profile-section { padding: 1.4rem 1.4rem .8rem; }
+.profile-top { display: flex; align-items: center; gap: 2rem; }
+
+/* Avatar with gradient ring */
+.profile-av-ring {
+  width: 78px; height: 78px; border-radius: 50%;
+  padding: 2.5px; background: var(--grad);
+  display: flex; align-items: center; justify-content: center;
+}
+.profile-av-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: var(--white); display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--white);
+}
+.profile-av-inner .av-xl { width: 68px; height: 68px; }
+
+/* Stats grid */
+.stats { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.stat-num { font-size: 1.6rem; font-weight: 800; color: var(--text); }
+.stat-lbl { font-size: 1rem; color: var(--soft); margin-top: .1rem; }
+
+/* Bio */
+.profile-bio  { padding: 0 1.4rem .8rem; }
+.profile-name { font-size: 1.3rem; font-weight: 800; }
+.profile-cat  { font-size: 1.1rem; color: var(--soft); margin-top: .2rem; }
+.profile-txt  { font-size: 1.2rem; line-height: 1.4; margin-top: .4rem; white-space: pre-line; }
+.profile-link { font-size: 1.2rem; color: var(--purple); font-weight: 700; margin-top: .3rem; display: block; }
+
+/* Action buttons */
+.profile-actions { display: flex; gap: .6rem; padding: .4rem 1.4rem 1rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 2.8rem; border-radius: 8px; font-size: 1.2rem; font-weight: 700;
+  padding: 0 1.2rem; cursor: pointer; border: none; font-family: inherit;
+}
+.btn-grad    { background: var(--grad); color: #fff; flex: 1; }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); flex: 1; }
+.btn-icon {
+  width: 2.8rem; height: 2.8rem; border-radius: 8px;
+  background: transparent; border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+
+/* Story highlights */
+.highlights {
+  display: flex; gap: 1.4rem; padding: .4rem 1.4rem 1rem;
+  overflow-x: auto; scrollbar-width: none;
+}
+.highlights::-webkit-scrollbar { display: none; }
+.hl { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.hl-ring {
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; padding: 2px;
+}
+.hl-ring-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg); font-size: 2rem;
+}
+.hl-lbl { font-size: 1rem; color: var(--text); text-align: center; }
+.hl-new { border: 1.5px dashed var(--border); background: transparent; }
+.hl-new .hl-ring-inner { background: var(--white); }
+
+/* Profile tabs */
+.profile-tabs { display: flex; border-top: 1px solid var(--border); }
+.profile-tab {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  height: 4rem; color: var(--soft); border-top: 2px solid transparent;
+  margin-top: -1px; cursor: pointer; transition: color .2s;
+}
+.profile-tab.active { color: var(--pink); border-top-color: var(--pink); }
+
+/* Post grid */
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.pg-item { aspect-ratio: 1/1; position: relative; display: flex; }
+.pg-item:nth-child(9n+1) { background: var(--post1); }
+.pg-item:nth-child(9n+2) { background: var(--post2); }
+.pg-item:nth-child(9n+3) { background: var(--post3); }
+.pg-item:nth-child(9n+4) { background: var(--post4); }
+.pg-item:nth-child(9n+5) { background: var(--post5); }
+.pg-item:nth-child(9n+6) { background: var(--post6); }
+.pg-item:nth-child(9n+7) { background: var(--post7); }
+.pg-item:nth-child(9n+8) { background: var(--post8); }
+.pg-item:nth-child(9n+9) { background: var(--post9); }
+.pg-icon {
+  position: absolute; top: 5px; right: 5px;
+  color: #fff; filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+}
+
+/* ======================================================
+   SCREEN 2 — FEED
+   ====================================================== */
+
+/* Stories row */
+.stories-row {
+  display: flex; gap: 1.2rem; padding: 1rem 1.4rem;
+  overflow-x: auto; scrollbar-width: none;
+  border-bottom: 1px solid var(--border);
+}
+.stories-row::-webkit-scrollbar { display: none; }
+.story-item { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.story-ring {
+  width: 58px; height: 58px; border-radius: 50%;
+  padding: 2.5px; background: var(--grad);
+  display: flex; align-items: center; justify-content: center;
+}
+.story-ring-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  border: 2px solid var(--white);
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; font-weight: 800; color: #fff;
+}
+.story-name {
+  font-size: 1rem; color: var(--text); text-align: center; max-width: 58px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.story-own { border: 1.5px solid var(--border); background: transparent; }
+.story-own .story-ring-inner { background: var(--bg); color: var(--pink); }
+.story-own-wrap { position: relative; }
+.story-plus {
+  position: absolute; bottom: -2px; right: -2px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--grad); border: 2px solid var(--white);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.2rem; font-weight: 700;
+}
+
+/* Feed post */
+.feed-post { border-bottom: 1px solid var(--border); }
+.feed-post-header { display: flex; align-items: center; gap: 1rem; padding: .9rem 1.4rem; }
+.feed-post-user   { flex: 1; display: flex; flex-direction: column; gap: .1rem; }
+.feed-post-name   { font-size: 1.2rem; font-weight: 700; }
+.feed-post-loc    { font-size: 1rem; color: var(--soft); }
+.feed-post-img {
+  width: 100%; aspect-ratio: 1/1;
+  display: flex; align-items: center; justify-content: center; font-size: 5rem;
+}
+.feed-post-actions { display: flex; align-items: center; gap: 1.4rem; padding: .8rem 1.4rem .4rem; }
+.feed-post-actions .ico-right { margin-left: auto; }
+.feed-post-likes   { padding: 0 1.4rem; font-size: 1.2rem; font-weight: 700; }
+.feed-post-caption { padding: .2rem 1.4rem .6rem; font-size: 1.2rem; line-height: 1.4; }
+.feed-post-caption span { font-weight: 700; }
+.feed-post-time    { padding: 0 1.4rem .8rem; font-size: 1rem; color: var(--soft); }
+
+/* ======================================================
+   SCREEN 3 — EXPLORE
+   ====================================================== */
+
+.search-bar-wrap { padding: 1rem 1.4rem; background: var(--white); }
+.search-bar {
+  display: flex; align-items: center; gap: .8rem;
+  background: #f5f0fa; border-radius: 12px; padding: .7rem 1.2rem;
+  color: var(--soft); font-size: 1.3rem;
+}
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.eg-item {
+  aspect-ratio: 1/1; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.eg-item.tall { grid-row: span 2; aspect-ratio: unset; }
+.eg-item:nth-child(9n+1) { background: var(--post1); }
+.eg-item:nth-child(9n+2) { background: var(--post4); }
+.eg-item:nth-child(9n+3) { background: var(--post7); }
+.eg-item:nth-child(9n+4) { background: var(--post2); }
+.eg-item:nth-child(9n+5) { background: var(--post5); }
+.eg-item:nth-child(9n+6) { background: var(--post8); }
+.eg-item:nth-child(9n+7) { background: var(--post3); }
+.eg-item:nth-child(9n+8) { background: var(--post6); }
+.eg-item:nth-child(9n+9) { background: var(--post9); }
+
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+
+@media (max-width: 760px) {
+  .phones { flex-direction: column; align-items: center; }
+}
+@media (max-width: 420px) {
+  body { padding: 2rem .5rem 4rem; }
+  .phone { width: calc(100vw - 16px); height: 90vh; }
+}
